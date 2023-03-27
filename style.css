@@ -1,0 +1,469 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background: linear-gradient(#00ffcc, #147763);
+    height: 100vh;  
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    animation: opac 2s linear;
+}
+@keyframes opac{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+
+
+
+.container {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    overflow: hidden;
+/*
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+*/
+
+  
+    z-index: 2;
+}
+
+.image {
+    background-image: url(IMG_6031.JPG);
+    background-size: cover;
+    padding: 70px;
+    animation: images 20s linear infinite;
+}
+
+@keyframes images {
+    0% {
+        background-image: url(IMG_6037.JPG);
+        background-size: cover;
+        opacity: 0;
+    }
+
+    20% {
+        background-image: url(IMG_6037.JPG);
+        background-size: cover;
+        opacity: 1;
+    }
+
+    35% {
+        background-image: url(IMG_6037.JPG);
+        background-size: cover;
+        opacity: 0.8;
+    }
+
+    39% {
+        background-image: url(IMG_6037.JPG);
+        background-size: cover;
+        opacity: 0.0;
+    }
+
+    40% {
+        background-image: url(IMG_6036.JPG);
+        background-size: cover;
+        opacity: 0;
+    }
+
+    60% {
+        background-image: url(IMG_6036.JPG);
+        background-size: cover;
+        opacity: 1;
+    }
+
+    75% {
+        background-image: url(IMG_6036.JPG);
+        background-size: cover;
+        opacity: 0.8;
+    }
+
+    79% {
+        background-image: url(IMG_6036.JPG);
+        background-size: cover;
+        opacity: 0;
+    }
+
+    80% {
+        background-image: url(IMG_6031.JPG);
+        background-size: cover;
+        opacity: 0;
+    }
+
+    88% {
+        background-image: url(IMG_6031.JPG);
+        background-size: cover;
+        opacity: 1;
+    }
+
+    95% {
+        background-image: url(IMG_6031.JPG);
+        background-size: cover;
+        opacity: 0.8;
+    }
+
+    100% {
+        background-image: url(IMG_6031.JPG);
+        background-size: cover;
+        opacity: 0;
+
+    }
+
+}
+
+.main {
+    padding: 50px 40px;
+    position: relative;
+    animation: opac 4s linear ;
+
+}
+
+.main h2 {
+    margin-bottom: 20px;
+    font-size: 1.9em;
+    font-weight: 520;
+}
+
+.main p {
+    display: inline-block;
+    font-size: 0.9em;
+    margin-bottom: 40px;
+}
+
+.main .size {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.main .size li {
+    list-style-type: none;
+    background: rgb(210, 202, 255);
+    color: rgb(69, 26, 200);
+    width: 100%;
+    /*    height: 40px;*/
+    border: 2px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.main .size li span {
+    padding: 10px 20px;
+}
+
+.main .size li:hover {
+    background: #FFFFFF;
+    color: cornflowerblue;
+    border: 1px solid cornflowerblue;
+}
+
+.main .size li span.special {
+    padding: 10px 5px;
+}
+
+.main .size li input {
+    width: 100px;
+    height: 100%;
+    border: 0;
+    outline: 0;
+    border: 1px solid rgb(210, 202, 255);
+    transition: 0.2;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.main .size li:hover input {
+    border: 2px solid rgb(210, 202, 255);
+}
+
+.main .size li input:focus {
+    border: 2px solid cornflowerblue;
+}
+
+.main .size li input::placeholder {
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.main .prices button {
+    padding: 15px 30px;
+    background: #147763;
+    color: antiquewhite;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 5px 4px 10px rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.main .prices button:hover {
+    background: crimson;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #555;
+    color: #ddd;
+    font-weight: bold;
+    width: 22px;
+    height: 22px;
+    text-align: center;
+    border-radius: 11px;
+    cursor: pointer;
+}
+
+
+ol li {
+    position: absolute;
+    border: 1px solid #fff;
+    width: 30px;
+    height: 30px;
+    list-style: none;
+    opacity: 0;
+    background: #fff;
+    z-index: -1;
+}
+
+.square li {
+    top: 50vh;
+    left: 45vw;
+    transform: rotate(45deg);
+    animation: square 7s linear infinite;
+}
+
+.square li:nth-child(2) {
+    top: 80vh;
+    left: 10vw;
+    animation-delay: 2s;
+}
+
+.square li:nth-child(3) {
+    top: 85vh;
+    left: 85vw;
+    animation-delay: 4s;
+}
+
+.square li:nth-child(4) {
+    top: 10vh;
+    left: 70vw;
+    animation-delay: 6s;
+}
+
+.square li:nth-child(5) {
+    top: 10vh;
+    left: 10vw;
+    animation-delay: 8s;
+}
+
+@keyframes square {
+    0% {
+        transform: scale(0) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(5) rotate(1000deg);
+        opacity: 0;
+    }
+}
+
+.circle li {
+    bottom: 0;
+    left: 10vw;
+    animation: circle 7s linear infinite;
+}
+
+.circle li:nth-child(2) {
+    left: 30vw;
+    animation-delay: 2s;
+}
+
+.circle li:nth-child(3) {
+    left: 50vw;
+    animation-delay: 6s;
+}
+
+.circle li:nth-child(4) {
+    left: 70vw;
+    animation-delay: 4s;
+}
+
+.circle li:nth-child(5) {
+    left: 90vw;
+    animation-delay: 8s;
+}
+
+@keyframes circle {
+    0% {
+        transform: scale(0) rotate(0deg);
+        opacity: 1;
+        top: 0;
+        border-radius: 0;
+    }
+
+    100% {
+        transform: scale(5) rotate(1000deg);
+        opacity: 1;
+        top: 90vh;
+        border-radius: 50%;
+    }
+
+}
+@media screen and (max-width: 706px){
+    body{
+        margin: 100px auto;
+        overflow: visible;
+    }
+   .container {grid-template-columns: 100%;}
+    .image{
+        height: 100%; 
+        background-size: cover;
+        padding: 200px;
+    }
+    @keyframes images {
+    0% {
+        background-image: url(IMG_6037.JPG);
+        background-size: cover;
+        background-position: center;
+        opacity: 0;
+    }
+
+    20% {
+        background-image: url(IMG_6037.JPG);
+        background-size: cover;
+        opacity: 1;
+    }
+
+    35% {
+        background-image: url(IMG_6037.JPG);
+        background-size: cover;
+        opacity: 0.8;
+    }
+
+    39% {
+        background-image: url(IMG_6037.JPG);
+        background-size: cover;
+        opacity: 0.0;
+    }
+
+    40% {
+        background-image: url(IMG_6036.JPG);
+        background-size: cover;
+        opacity: 0;
+    }
+
+    60% {
+        background-image: url(IMG_6036.JPG);
+        background-size: cover;
+        background-position: center;
+        opacity: 1;
+    }
+
+    75% {
+        background-image: url(IMG_6036.JPG);
+        background-size: cover;
+        background-position: center;
+        opacity: 0.8;
+    }
+
+    79% {
+        background-image: url(IMG_6036.JPG);
+        background-size: cover;
+        background-position: center;
+        opacity: 0;
+    }
+
+    80% {
+        background-image: url(IMG_6031.JPG);
+        background-size: cover;
+        opacity: 0;
+    }
+
+    88% {
+        background-image: url(IMG_6031.JPG);
+        background-size: cover;
+        opacity: 1;
+    }
+
+    95% {
+        background-image: url(IMG_6031.JPG);
+        background-size: cover;
+        opacity: 0.8;
+    }
+
+    100% {
+        background-image: url(IMG_6031.JPG);
+        background-size: cover;
+        opacity: 0;
+
+    }
+
+}
+}
+
+@media screen and (max-width: 540px){
+    .main {
+    padding: 40px 20px;
+    }
+    .main .prices button {
+    width: 100%;
+    }
+}
+@media screen and (max-width: 500px){
+    body{
+        margin: 50px 20px;
+    }
+    .image{
+        padding: 100px;
+    }
+    .main{
+        padding: 30px 15px;
+    }
+    .main p{
+        text-align: center;
+        font-size: 1.2em;
+    }
+    .main .size{
+        display: block;
+    }
+    .main .size li{
+        margin-bottom: 10px;
+    }
+    .main .size li input {
+    width: 50%;
+    height: 35px;
+    font-size: 1em;
+    }
+    .main .prices button {
+    width: 100%;
+    }
+}
+@media screen and (max-width: 392px){
+    .main h2{
+        font-size: 1.5em;
+        text-align: center;
+    }
+    .main p{
+        font-size: 0.8em;
+        text-align-last: center;
+        margin-bottom: 15px;
+    }
+}
